@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 80,   host: 8080
   config.vm.network :forwarded_port, guest: 3306, host: 8889
   config.vm.network :forwarded_port, guest: 5432, host: 5433
-  config.vm.network :private_network, ip: "192.168.11.11" #your project url
+  config.vm.network :private_network, ip: "192.168.33.33" #your project url
   config.vm.provision :shell, :path => "install.sh" #vagrant installation file settings
 	config.vm.synced_folder ".", "/var/www" #ssh folder access /first parameter is a path to a directory on the host machine/
 end
